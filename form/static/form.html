@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Окуучулардын катталуу баракчасы </title>
+    <link rel="icon" href="imgpage/Yimanlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <div class="registration-form">
+        <form method="post" action="make_pdf_page" enctype='multipart/form-data'>
+            {% csrf_token %}
+            <div class="imageicon">
+                <img src="{% static 'img/logo.png' %}"
+                    alt="gfg-logo"
+                    style="width:100px;height:100px;">
+            </div>
+            <div class="registration-topic">
+                <h3>Катталуу</h3>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="okuuchu_name" placeholder="Окуучунун толук аты-жөнү:" name="full_name">
+            </div>
+            <div class="form-group">
+<!--                 <button  class="form-control item" onclick ="document.getElementById('getFile').click()" name="image">3Х4 өлчөмүндө сүрөт жүктөңүз</button> -->
+                <input type="file" class="form-control item" id="getFile"  name="image_path" accept=".jpg,.jpeg,.png">
+                <input type="text" class="form-control item" id="gender" placeholder="Жынысы:" name="gender">
+            </div>
+            <div class="form-group">
+                <input type="date" class="form-control item" id="birth_date" name="birth_day" placeholder="Туулган күнү, айы, жылы:">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="klassy" placeholder="Канчанчы классты бүтүрдүңүз?" name="class_of_year">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="adres" placeholder="Жашаган облусу, району, айылы:" name="region">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="okuuchu_phone" placeholder="Окуучунун телефон номери:" name="phone_number_student">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="ataene_name" placeholder="Окуучунун ата-энесинин аты-жөнү:" name="name_of_dud_mum">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="ataene_phone" placeholder=" Ата-энесинин байланыш номерлери:" name="phone_of_dud_mum">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="jk_name" placeholder="Жооптуу кишинин аты-жөнү:" name="name_guardian">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="jk_phone" placeholder="Жооптуу кишинин тел.номери:" name="phone_guardian">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="whatsapp_phone" placeholder="Вотсап номери:" name="whatsapp">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="k_sabak" placeholder="Кызыккан сабактары?" name="interesting_lesson">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="iygilik" placeholder="Ийгиликтери (олимпиада, сабактар, спорт, маданий ж.б.)" name="success">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="onor" placeholder="Өнөрлөрү (жөндөмдүүлүктөрү):" name="hobbies">
+            </div>
+            <div class="form-group">
+
+                <button type="submit" class="btn btn-block submit">Жөнөтүү</button>
+            </div>
+        </form>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

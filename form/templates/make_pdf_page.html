@@ -1,0 +1,126 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/resume.css' %}"/>
+  </head>
+
+  <body>
+    <div class="full" id="full">
+      <div class="left">
+        <div class="image">
+          <img
+            src="{% static 'img/logo.png' %}"
+            alt="gfg-logo"
+            style="width: 100px; height: 100px"
+          />
+        </div>
+        <div class="Contact">
+          <h2>Байланыш:</h2>
+          <p><b>Дарек:</b>Исанов көчөсү 75/2</p>
+          <p><b>Тел:</b>+996 559-98-68-70</p>
+        </div>
+      </div>
+      <div class="right">
+        <div class="name">
+          <h1>Ыйман Гимназиясы</h1>
+        </div>
+        <div class="titlepage">
+          <p><b>Каттоо Баракчасы</b></p>
+          <hr />
+        </div>
+        <div class="imagechildren">
+          <img src="{{ url.image_path.url  }}"
+            alt="gfg-logo"
+            style="width: 100px; height: 100px"
+          />
+        </div>
+
+        <div class="ch_name">
+          <h3>- Аты Жөнү</h3>
+          <hr />
+          <p> {{ context.full_name }}</p>
+        </div>
+        <div class="Gender">
+          <h3>- Жынысы:</h3>
+          <hr />
+          <p> {{ context.gender }}</p>
+        </div>
+        <div class="birth-date">
+          <h3>- Туулган күнү, айы, жылы:</h3>
+          <hr />
+          <p> {{ context.birth_day }}</p>
+        </div>
+        <div class="adres">
+          <h3>- Жашаган облусу, району, айылы:</h3>
+          <hr />
+          <p> {{ context.region }}</p>
+        </div>
+        <div class="ch_phone">
+          <h3>- Окуучунун телефон номери:</h3>
+          <hr />
+          <p> {{ context.phone_number_student }}</p>
+        </div>
+        <div class="ataene_name">
+          <h3>- Окуучунун ата-энесинин толук аты-жөнү:</h3>
+          <hr />
+          <p>{{ context.name_of_dud_mum}}</p>
+        </div>
+        <div class="ataene_phone">
+          <h3>- Окуучунун ата-энесинин байланыш номерлери:</h3>
+          <hr />
+          <p>{{ context.phone_of_dud_mum}}</p>
+        </div>
+        <div class="jk_name">
+          <h3>- Окуучуга жооптуу кишинин толук аты-жөнү:</h3>
+          <hr />
+          <p>{{ context.name_guardian}}</p>
+        </div>
+        <div class="jk_phone">
+          <h3>- Окуучуга жооптуу кишинин тел.номери:</h3>
+          <hr />
+          <p>{{ context.phone_guardian}}</p>
+        </div>
+        <div class="whatsapp_phone">
+          <h3>- Ар дайым байланышта болгон ватсап номери:</h3>
+          <hr />
+          <p>{{ context.whatsapp }}</p>
+        </div>
+        <div class="interested">
+          <h3>- Кызыккан сабактары?</h3>
+          <hr />
+          <p>{{ context.interesting_lesson}}</p>
+        </div>
+        <div class="Success">
+          <h3>- Ийгиликтери (олимпиада, сабактар, спорт, маданий ж.б.)</h3>
+          <hr />
+          <p>{{ context.success }}</p>
+        </div>
+        <div class="Arts">
+          <h3>- Өнөрлөрү (жөндөмдүүлүктөрү):</h3>
+          <hr />
+          <p>{{ context.hobbies}}</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <button type="button" class="btn btn-primary" onclick="Print()">
+    Сактоо
+  </button>
+  <hr />
+
+  <script>
+    function Print() {
+      var printContents = document.getElementById("full").innerHTML;
+      var originalContents = document.body.innerHTML;
+
+      document.body.innerHTML = printContents;
+
+      window.print();
+
+      document.body.innerHTML = originalContents;
+    }
+  </script>
+</html>

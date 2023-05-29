@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Окуучулардын катталуу баракчасы </title>
+    <link rel="icon" href="imgpage/Yimanlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+<div class="registration-form">
+    <form method="post" action="make_pdf_page" enctype='multipart/form-data'>
+        {% csrf_token %}
+        <div class="imageicon">
+            <img src="{% static 'img/logo.png' %}"
+                 alt="gfg-logo"
+                 style="width:100px;height:100px;">
+        </div>
+        <div class="form-group">
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" class="btn btn-block submit">Жөнөтүү</button>
+        </div>
+    </form>
+
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
