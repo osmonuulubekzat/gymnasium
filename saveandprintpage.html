@@ -1,0 +1,126 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="resume.css" />
+  </head>
+
+  <body>
+    <div class="full" id="full">
+      <div class="left">
+        <div class="image">
+          <img
+            src="formlogo/Ыйман.png"
+            alt="gfg-logo"
+            style="width: 100px; height: 100px"
+          />
+        </div>
+        <div class="Contact">
+          <h2>Байланыш:</h2>
+          <p><b>Дарек:</b>Исанов көчөсү 75/2</p>
+          <p><b>Тел:</b>+996 559-98-68-70</p>
+        </div>
+      </div>
+      <div class="right">
+        <div class="name">
+          <h1>Ыйман Гимназиясы</h1>
+        </div>
+        <div class="titlepage">
+          <p><b>Каттоо Баракчасы</b></p>
+          <hr />
+        </div>
+        <div class="imagechildren">
+          <img
+            src="https://media.istockphoto.com/id/480286744/photo/portrait-of-a-german-businessman-with-beard.jpg?s=612x612&w=0&k=20&c=PAi9oWMV2LLkbPM14nvpWOAZUk_kb6DXvpQ4ZwyJvjs="
+            alt="gfg-logo"
+            style="width: 100px; height: 100px"
+          />
+        </div>
+
+        <div class="ch_name">
+          <h3>- Аты Жөнү</h3>
+          <hr />
+          <p>Баланчаев Тукунчо</p>
+        </div>
+        <div class="Gender">
+          <h3>- Жынысы:</h3>
+          <hr />
+          <p>Кыз</p>
+        </div>
+        <div class="birth-date">
+          <h3>- Туулган күнү, айы, жылы:</h3>
+          <hr />
+          <p>20.10.2009</p>
+        </div>
+        <div class="adres">
+          <h3>- Жашаган облусу, району, айылы:</h3>
+          <hr />
+          <p>ош шаары</p>
+        </div>
+        <div class="ch_phone">
+          <h3>- Окуучунун телефон номери:</h3>
+          <hr />
+          <p>+996772986523</p>
+        </div>
+        <div class="ataene_name">
+          <h3>- Окуучунун ата-энесинин толук аты-жөнү:</h3>
+          <hr />
+          <p>Тукунчоев Паланча</p>
+        </div>
+        <div class="ataene_phone">
+          <h3>- Окуучунун ата-энесинин байланыш номерлери:</h3>
+          <hr />
+          <p>+996772986523</p>
+        </div>
+        <div class="jk_name">
+          <h3>- Окуучуга жооптуу кишинин толук аты-жөнү:</h3>
+          <hr />
+          <p>Паланчаев тукунчо</p>
+        </div>
+        <div class="jk_phone">
+          <h3>- Окуучуга жооптуу кишинин тел.номери:</h3>
+          <hr />
+          <p>+996772986523</p>
+        </div>
+        <div class="whatsapp_phone">
+          <h3>- Ар дайым байланышта болгон вотсап номери:</h3>
+          <hr />
+          <p>+996772986523</p>
+        </div>
+        <div class="interested">
+          <h3>- Кызыккан сабактары?</h3>
+          <hr />
+          <p>Кыргыз тили</p>
+        </div>
+        <div class="Success">
+          <h3>- Ийгиликтери (олимпиада, сабактар, спорт, маданий ж.б.)</h3>
+          <hr />
+          <p>Олимпиада биринчиси</p>
+        </div>
+        <div class="Arts">
+          <h3>- Өнөрлөрү (жөндөмдүүлүктөрү):</h3>
+          <hr />
+          <p>Комуз чертүү</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <button type="button" class="btn btn-primary" onclick="Print()">
+    Сактоо
+  </button>
+  <hr />
+
+  <script>
+    function Print() {
+      var printContents = document.getElementById("full").innerHTML;
+      var originalContents = document.body.innerHTML;
+
+      document.body.innerHTML = printContents;
+
+      window.print();
+
+      document.body.innerHTML = originalContents;
+    }
+  </script>
+</html>

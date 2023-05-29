@@ -1,0 +1,44 @@
+/* Write CSS Here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.full {
+    width: 50%;
+    max-width: 1000px;
+    min-height: 100px;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 2fr 4fr;    
+    margin: 27mm 16mm 27mm 16mm;
+    border:solid
+}
+.left {
+    position: initial;
+    padding: 20px;
+    font-size: 12px;
+ 
+}
+.right {
+    position: initial;
+    padding: 20px;
+ 
+}
+.imagechildren, .Contact, .ch_name, .Gender, .birth-date, .adres, .ch_phone, .ataene_name, .ataene_phone, .jk_name, .jk_phone, .whatsapp_phone,
+.interested, .Success, .Arts, .project {
+    margin-bottom: 20px;
+}
+.titlepage{
+    margin-bottom: 10px;
+}
+
+
+.h3 {
+    color: rgb(4, 96, 150);
+}

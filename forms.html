@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Окуучулардын катталуу баракчасы </title>
+    <link rel="icon" href="imgpage/Yimanlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="registration-form">
+        <form>          
+            <div class="imageicon">
+                <img src="formlogo/Ыйман.png"
+                    alt="gfg-logo"
+                    style="width:100px;height:100px;">
+            </div>
+            <div class="registration-topic">
+                <h3>Катталуу</h3>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="okuuchu_name" placeholder="Окуучунун толук аты-жөнү:">
+            </div>
+            <div class="form-group">
+                <button  class="form-control item" onclick ="document.getElementById('getFile').click()">3Х4 өлчөмүндө сүрөт жүктөңүз</button>
+                <input type="file" class="form-control item" id="getFile" style="display:none" name="file" accept=".jpg,.jpeg,.png">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="gender" placeholder="Жынысы:">
+            </div>
+            <div class="form-group">            
+                <input type="date" class="form-control item" id="birth_date" name="date" placeholder="Туулган күнү, айы, жылы:">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="klassy" placeholder="Канчанчы классты бүтүрдүңүз?">                
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="adres" placeholder="Жашаган облусу, району, айылы:">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="okuuchu_phone" placeholder=" Окуучунун телефон номери:">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="ataene_name" placeholder="Окуучунун ата-энесинин аты-жөнү:">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="ataene_phone" placeholder=" Ата-энесинин байланыш номерлери:">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="jk_name" placeholder="Жооптуу кишинин аты-жөнү:">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="jk_phone" placeholder="Жооптуу кишинин тел.номери:">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="whatsapp_phone" placeholder="Вотсап номери:">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="k_sabak" placeholder="Кызыккан сабактары?">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="iygilik" placeholder="Ийгиликтери (олимпиада, сабактар, спорт, маданий ж.б.)">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="onor" placeholder="Өнөрлөрү (жөндөмдүүлүктөрү):">
+            </div>
+            <div class="form-group">
+                
+                <button type="button" class="btn btn-block submit">Жөнөтүү</button>
+            </div>
+        </form>        
+                
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
